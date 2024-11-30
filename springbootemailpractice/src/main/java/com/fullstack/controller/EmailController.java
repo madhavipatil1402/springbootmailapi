@@ -20,6 +20,7 @@ public class EmailController {
     @PostMapping("/sendemail")
     public ResponseEntity<String> sendEmail(@RequestBody EmailModel emailModel){
         log.info("Sending Email to :"+emailModel.getToEmail());
+        log.info("#####SEnding Email CC:"+emailModel.getToEmail());
         emailService.sendEmail(emailModel);
         return ResponseEntity.ok("mail send Successfully");
     }
