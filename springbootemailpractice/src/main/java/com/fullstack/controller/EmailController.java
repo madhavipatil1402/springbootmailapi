@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class EmailController {
     @Autowired
     private IEmailService emailService;
-
+// done
     @PostMapping("/sendemail")
     public ResponseEntity<String> sendEmail(@RequestBody EmailModel emailModel){
         log.info("Sending Email to :"+emailModel.getToEmail());
